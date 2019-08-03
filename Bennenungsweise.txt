@@ -1,0 +1,7 @@
+Methoden: exampleMethode()
+Variablen: example_variable
+Klassen: ExampleClass
+Ordner: example_folder
+Dateien: example_file
+Konstanten: EXAMPLE_CONSTANT
+Grafische Objekte: jBtnButton1 [Objekt-Klassen Abkürzung]+Name

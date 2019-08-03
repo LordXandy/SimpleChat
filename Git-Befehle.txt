@@ -1,0 +1,9 @@
+git pull
+
+[arbeiten]
+
+git add [changed file]
+
+git commit -m "[Änderungen]"
+
+git push
