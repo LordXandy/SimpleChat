@@ -18,6 +18,8 @@ public class MainFrame implements ActionListener{
 	JFrame jFrame;
 	JPanel jPanel;
 	
+	//------------------------------------------------------------------------------------------
+	
 	JMenuBar jMenuBar;
 	
 	JMenu jMenuFile;
@@ -27,16 +29,22 @@ public class MainFrame implements ActionListener{
 	JMenuItem jMenuFileSaveAs;
 	JMenuItem jMenuFileExit;
 	
+	JMenu jMenuConnection;
+	JMenuItem jMenuConnectionConnectToRoom;
+	JMenuItem jMenuConnectionAddNewRoom;
+	JMenuItem jMenuConnectionConnect;
+	JMenuItem jMenuConnectionDisconnect;
+	
 	JMenu jMenuHelp;
 	JMenuItem jMenuHelpShowHelp;
 	
 	public MainFrame() {
 		jFrame=new JFrame("SimpleChat");
 		jPanel=new JPanel();
-        
+		//------------------------------------------------------------------------------------------
 		addMenues();
         jFrame.setJMenuBar(jMenuBar);
-		
+        //------------------------------------------------------------------------------------------
         jFrame.add(jPanel);
         jFrame.setSize(600, 1000);
         jFrame.setLocationRelativeTo(null);
@@ -55,7 +63,10 @@ public class MainFrame implements ActionListener{
 		jMenuBar=new JMenuBar();
 		
 		jMenuFile=new JMenu("File");
+		jMenuConnection=new JMenu("Connection");
 		jMenuHelp=new JMenu("Help");
+		
+		//------------------------------------------------------------------------------------------
 		
 		jMenuFileNew=new JMenuItem("New");
 		jMenuFileLoad=new JMenuItem("Load");
@@ -63,7 +74,14 @@ public class MainFrame implements ActionListener{
 		jMenuFileSaveAs=new JMenuItem("Save As...");
 		jMenuFileExit=new JMenuItem("Exit");
 		
+		jMenuConnectionConnectToRoom=new JMenuItem("Connect to room");		
+		jMenuConnectionAddNewRoom=new JMenuItem("Add new room...");
+		jMenuConnectionConnect=new JMenuItem("Connect...");
+		jMenuConnectionDisconnect=new JMenuItem("Disconnect");
+		
 		jMenuHelpShowHelp=new JMenuItem("Show Help");
+		
+		//------------------------------------------------------------------------------------------
 		
 		jMenuFile.add(jMenuFileNew);
 		jMenuFile.add(jMenuFileLoad);
@@ -71,7 +89,14 @@ public class MainFrame implements ActionListener{
 		jMenuFile.add(jMenuFileSaveAs);
 		jMenuFile.add(jMenuFileExit);
 		
+		jMenuConnection.add(jMenuConnectionConnectToRoom);
+		jMenuConnection.add(jMenuConnectionAddNewRoom);
+		jMenuConnection.add(jMenuConnectionConnect);
+		jMenuConnection.add(jMenuConnectionDisconnect);
+		
 		jMenuHelp.add(jMenuHelpShowHelp);
+		
+		//------------------------------------------------------------------------------------------
 		
 		jMenuFileNew.addActionListener(this);
 		jMenuFileLoad.addActionListener(this);
@@ -79,9 +104,17 @@ public class MainFrame implements ActionListener{
 		jMenuFileSaveAs.addActionListener(this);
 		jMenuFileExit.addActionListener(this);
 		
+		jMenuConnectionConnectToRoom.addActionListener(this);
+		jMenuConnectionAddNewRoom.addActionListener(this);
+		jMenuConnectionConnect.addActionListener(this);
+		jMenuConnectionDisconnect.addActionListener(this);
+		
 		jMenuHelp.addActionListener(this);
 		
+		//------------------------------------------------------------------------------------------
+		
 		jMenuBar.add(jMenuFile);
+		jMenuBar.add(jMenuConnection);
 		jMenuBar.add(jMenuHelp);
 	}
 	
@@ -90,7 +123,8 @@ public class MainFrame implements ActionListener{
 		
 	}
 	
-	public void actionPerformed(ActionEvent e) {    
+	public void actionPerformed(ActionEvent e) {
+		//------------------------------------------------------------------------------------------
 		if(e.getSource()==jMenuFileNew) {
 			
 		}
@@ -106,8 +140,20 @@ public class MainFrame implements ActionListener{
 		if(e.getSource()==jMenuFileExit) {
 			System.exit(0);
 		}
+		//------------------------------------------------------------------------------------------
+		if(e.getSource()==jMenuConnectionConnectToRoom) {
+			
+		}if(e.getSource()==jMenuConnectionAddNewRoom) {
+			
+		}if(e.getSource()==jMenuConnectionConnect) {
+			
+		}if(e.getSource()==jMenuConnectionDisconnect) {
+			
+		}
+		//------------------------------------------------------------------------------------------
 		if(e.getSource()==jMenuHelpShowHelp) {
 			
 		}
+		//------------------------------------------------------------------------------------------
 	}
 }
