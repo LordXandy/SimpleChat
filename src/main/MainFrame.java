@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,6 +10,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class MainFrame implements ActionListener{
 	/* Klassicher MainjFrame
@@ -17,6 +21,9 @@ public class MainFrame implements ActionListener{
 	
 	JFrame jFrame;
 	JPanel jPanel;
+	JTextField  jTextField;	
+	JTextArea jTextArea;
+	JScrollPane jScrollPane;
 	
 	//------------------------------------------------------------------------------------------
 	
@@ -38,18 +45,23 @@ public class MainFrame implements ActionListener{
 	JMenu jMenuHelp;
 	JMenuItem jMenuHelpShowHelp;
 	
-	public MainFrame() {
+	public MainFrame() {		
 		jFrame=new JFrame("SimpleChat");
-		jPanel=new JPanel();
+		
+		jTextArea=new JTextArea();
+		jScrollPane=new JScrollPane(jTextArea);
+		jTextField=new JTextField();
 		//------------------------------------------------------------------------------------------
 		addMenues();
         jFrame.setJMenuBar(jMenuBar);
         //------------------------------------------------------------------------------------------
+        addPanel();
         jFrame.add(jPanel);
+		//------------------------------------------------------------------------------------------
         jFrame.setSize(600, 1000);
         jFrame.setLocationRelativeTo(null);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
         /* JButton button = new JButton();
@@ -57,6 +69,14 @@ public class MainFrame implements ActionListener{
          * panel.add(button);
          */
 		
+	}
+	
+	public void addPanel() {
+		jPanel=new JPanel();
+		jPanel.setLayout(new BorderLayout());
+		jPanel.add(jScrollPane,BorderLayout.CENTER);
+		jPanel.add(jTextField, BorderLayout.PAGE_END);
+		//jPanel.add(jScrollPane);
 	}
 	
 	public void addMenues() {
