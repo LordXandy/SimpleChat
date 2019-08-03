@@ -5,6 +5,9 @@ import java.io.File;
 public class FileManager {
 	/* Soll Dateien speichern und laden
 	 * später auch Bild Dateien
+	 * 
+	 * BIS JETZT SEHR PROVISORISCH
+	 * VIELE ÄNERUNGEN WERDEN NOCH KOMMEN
 	 */
 	
 	public void save(File f) {
