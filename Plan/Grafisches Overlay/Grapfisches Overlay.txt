@@ -1,0 +1,5 @@
+Oben ein menu in dem man die verschiedenen sachen wie z.B. connection, file, help auswählen kann
+große textarea um den chatverlauf darzustellen
+textfiel um die nachricht einzugeben
+senden button
+(einen "..." Button für smilies oder farbigen text) <---- advanced: wichtig für später
